@@ -1,33 +1,44 @@
+
 const navItems = [
     {
-        name: "Items 1",
+        name : "Item 1",
+        children : ["Item 1.1","Item 1.2","Item 1.3"]
     },
     {
-        name: "Items 2",
+        name : "Item 2",
+        children : [
+            "Item 1.1",
+            "Item 1.2",
+            "Item 1.3",
+            "Item 1.1",
+            "Item 1.2",
+            "Item 1.3"]
     },
     {
-        name: "Items 3",
+        name : "Item 3"
     },
     {
-        name: "Items 4",
+        name : "Item 4"
     },
     {
-        name: "Items 5",
-    },
-]
-
-// function chuye(){
-//     document.getElementsByClassName("")
-// }
+        name : "Item 5"
+    }
+];
 
 window.onload = function(){
-    for( let a of navItems ) {
-        document.getElementsByClassName("menu")[0].innerHTML+=`<span>
-            
-        `
-         + a.name+
-        `
-        </span>`
-        
+    let i = 0;
+    for(let a of navItems){
+        document.getElementsByClassName("menu")[0]
+        .innerHTML += 
+        `<span>`+a.name+`
+            <div class="dropdown"></div>
+        </span>`;
+        if( a.children ){
+            for( let v of a.children){
+                document.getElementsByClassName("dropdown")[i]
+                .innerHTML += `<span>` + v + `</span>`;
+            }
+            i++;
+        }
     }
 }

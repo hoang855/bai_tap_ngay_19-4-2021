@@ -1,31 +1,43 @@
 
-
-
-.team_2{
-    /* display: inline-block; */
-    padding: 20px 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
+*{
+    padding: 0;
+    margin: 0;
 }
 
-.team_2 span{
-    width: 40.3px;
+.menu{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.menu span{
+    width: 100px;
     height: 30px;
+    background-color: rgb(36, 157, 173);
+    display: inline-block;
     text-align: center;
-    padding: 5px 30px;
-    margin: 15px;
-    background-color: rgb(128, 141, 134);
-}
-
-.team_2 span:hover{
-    background-color: salmon;
-}
-
-/* .team_2 > .team_2_2{
-    display: block;
-} */
-
-.team_2_2 span{
-    display: block;
     line-height: 30px;
+}
+
+.dropdown span{
+    display: block;
+}
+
+.dropdown{
+    display: none;
+}
+
+.dropdown span{
+    background-color: rgb(0, 247, 255);
+    color: black;
+}
+
+.menu span:hover{
+    background-color: rgb(124, 101, 255);
+    color: rgb(255, 255, 255);
+}
+
+.menu span:hover .dropdown{
+    display: block;
+    position: fixed;
 }
